@@ -29,7 +29,7 @@ const Login = () => {
       setShowForm(false);
 
       setTimeout(() => {
-        router.push('/dashboard');
+        router.push('/sidebar');
       }, 3000);
     } else {
       setError('Invalid credentials. Please try again.');
