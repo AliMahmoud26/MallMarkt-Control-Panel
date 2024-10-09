@@ -67,7 +67,7 @@ const Sidebar = () => {
     }
 
     return (
-        <aside className={`h-screen ${isCollapsed ? 'w-[80px]' : 'w-[250px]'} max-sm:w-[70px]`}>
+        <aside className={`h-screen ${isCollapsed ? 'w-[80px]' : 'w-[250px]'}`}>
             <nav className='h-full flex flex-col bg-white border-r shadow-sm'>
                 <div className="flex justify-between items-center p-[20px] border-b-2 mb-[30px] cursor-pointer">
                     <Link href='/dashboard' className="flex items-center gap-1">
