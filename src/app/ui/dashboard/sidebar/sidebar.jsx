@@ -1,9 +1,9 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Logo from '../public/assets/logo.png';
+import Logo from '../../../public/assets/logo.png';
 import { FaChevronLeft, FaChartBar, FaShoppingCart, FaUsers, FaCog, FaComments, FaShieldAlt, FaQuestionCircle, FaCompass, FaHome, FaRegChartBar } from 'react-icons/fa';
-import Logout from '../[login]/logout';
+// import Logout from '../[login]/logout';
 import Link from 'next/link';
 
 const Sidebar = () => {
@@ -13,39 +13,48 @@ const Sidebar = () => {
     const menuItems = [
         {
             name: "Dashboard",
-            icon: <FaHome />
+            icon: <FaHome />,
+            href: '/dashboard'
         },
         {
             name: "Analytics",
-            icon: <FaChartBar />
+            icon: <FaChartBar />,
+            href: '/dashboard/analytics'
         },
         {
             name: "Explore",
-            icon: <FaCompass />
+            icon: <FaCompass />,
+            href: '/dashboard/explore'
         },
         {
             name: "Shop",
-            icon: <FaShoppingCart />
+            icon: <FaShoppingCart />,
+            href: '/dashboard/shop'
         },
         {
             name: "Customers",
-            icon: <FaUsers />
+            icon: <FaUsers />,
+            href: '/dashboard/customers'
         },
         {
             name: "Chat",
-            icon: <FaComments />
+            icon: <FaComments />,
+            href: '/dashboard/chat'
         },
         {
             name: "Settings",
-            icon: <FaCog />
+            icon: <FaCog />,
+            href: '/dashboard/settings'
         },
         {
             name: "Help",
-            icon: <FaQuestionCircle />
+            icon: <FaQuestionCircle />,
+            href: '/dashboard/help'
         },
         {
             name: "Privacy",
-            icon: <FaShieldAlt />
+            icon: <FaShieldAlt />,
+            href: '/dashboard/privacy'
         },
     ]
 
@@ -73,16 +82,17 @@ const Sidebar = () => {
                 <ul className='sidebar flex flex-col ms-[10px] flex-1 px-3'>
                     {
                         menuItems.map((item) => (
-                            <li
-                            key={item.name}
-                            className={`text-xl mb-3 p-2 cursor-pointer font-semibold rounded-lg duration-500 flex items-center gap-3
-                            ${activeItem == item.name ? 'bg-sky-500 text-white translate-x-[5px]' : 'text-gray-700 hover:text-sky-500 hover:bg-gray-200 hover:translate-x-[5px]'}
-                            ${isCollapsed ? 'w-[40px]' : 'w-[200px]'} overflow-hidden transition-all duration-300`}
-                            onClick={() => handleItemClick(item.name)}
-                            >
-                                <span>{item.icon}</span>
-                                <span className={`${isCollapsed ? 'hidden' : 'whitespace-nowrap'}`}>{item.name}</span>
-                            </li>
+                                <Link
+                                href={item.href}
+                                key={item.name}
+                                className={`text-xl mb-3 p-2 cursor-pointer font-semibold rounded-lg duration-500 flex items-center gap-3
+                                ${activeItem == item.name ? 'bg-sky-500 text-white translate-x-[5px]' : 'text-gray-700 hover:text-sky-500 hover:bg-gray-200 hover:translate-x-[5px]'}
+                                ${isCollapsed ? 'w-[40px]' : 'w-[200px]'} overflow-hidden transition-all duration-300`}
+                                onClick={() => handleItemClick(item.name)}
+                                >
+                                    <span>{item.icon}</span>
+                                    <span className={`${isCollapsed ? 'hidden' : 'whitespace-nowrap'}`}>{item.name}</span>
+                                </Link>
                         ))
                     }
                 </ul>
