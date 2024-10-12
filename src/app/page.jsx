@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Logo from './public/assets/logo.png'
 import Hero from './components/Hero';
 import Features from './components/Features';
+import Footer from './components/Footer';
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       
       <Hero />
       <Features />
+      <Footer />
     </>
   );
 };
