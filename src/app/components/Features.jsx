@@ -5,7 +5,7 @@ import {features} from './Data'
 const Features = () => {
   return (
     <section className='mt-[80px] my-[50px] mx-[30px]' id='features'>
-        <h1 className='max-sm:text-3xl text-center mb-[40px] text-4xl text-sky-900'>Features</h1>
+        <h1 className='max-sm:text-3xl text-center mb-[40px] text-4xl text-sky-900 font-bold'>Features</h1>
       <div className="grid grid-cols-3 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
         {
           features.map((feature, index) => (
