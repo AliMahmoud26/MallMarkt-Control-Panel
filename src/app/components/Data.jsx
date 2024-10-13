@@ -23,7 +23,7 @@ export const features = [
     },
     {
         img: CRM,
-        header: 'Order & Customer Management',
+        header: 'Customer Relationship Management',
         content: 'View, process, and manage customer orders and profiles with a streamlined interface.'
     },
     {
