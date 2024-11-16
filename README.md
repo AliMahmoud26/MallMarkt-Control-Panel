@@ -21,6 +21,6 @@ Password: ali123
 
 ![Login Page](./src/app/public/project%20images/Login%20Page.jpeg)
 
-### Success Message of The MallMark Admin Panel
+### Success Message After Login
 
 ![Success Message](./src/app/public/project%20images/Success%20Message.jpeg)
